@@ -333,16 +333,13 @@ section {
     justify-content: center;
 }
 
-.placeholder-image {
+.about-image img {
     width: 300px;
     height: 300px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    object-fit: cover;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 8rem;
     box-shadow: var(--shadow-lg);
+    border: 5px solid var(--primary-color);
 }
 
 /* Contact Section */
@@ -550,10 +547,9 @@ footer {
         order: -1;
     }
 
-    .placeholder-image {
+    .about-image img {
         width: 200px;
         height: 200px;
-        font-size: 5rem;
     }
 
     .whatsapp-float {
