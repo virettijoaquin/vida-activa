@@ -122,11 +122,19 @@ header {
 
 .hero-subtitle {
     font-size: 1.3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     opacity: 0.95;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.hero-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    opacity: 0.98;
+    letter-spacing: 1px;
 }
 
 .hero-buttons {
@@ -302,8 +310,15 @@ section {
 
 .about-text h2 {
     color: var(--primary-color);
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     font-size: 2.2rem;
+}
+
+.about-text h3 {
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 .about-text p {
