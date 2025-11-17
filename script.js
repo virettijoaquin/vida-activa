@@ -1,3 +1,31 @@
+// Toggle menú hamburguesa
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
+
+// Cerrar menú al hacer click en un enlace
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function() {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+    });
+});
+
+// Cerrar menú al hacer click fuera
+document.addEventListener('click', function(event) {
+    const isClickInsideNav = navLinks.contains(event.target);
+    const isClickOnHamburger = hamburger.contains(event.target);
+    
+    if (!isClickInsideNav && !isClickOnHamburger && navLinks.classList.contains('active')) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+    }
+});
+
 // Smooth scrolling para los enlaces de navegación
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
